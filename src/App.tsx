@@ -1,8 +1,6 @@
 import { LiquidGlassCard } from './components/LiquidGlassCard';
 import { MonitorMockup } from './components/MonitorMockup';
 import { PhoneMockup } from './components/PhoneMockup';
-import { FAQItem } from './components/FAQItem';
-import { FeatureCard } from './components/FeatureCard';
 import { 
   Download, 
   ExternalLink, 
@@ -15,165 +13,11 @@ import {
   Zap, 
   Globe, 
   Shield,
-  Users,
-  Tv,
-  Film,
-  Clock,
-  Wifi,
-  WifiOff,
   Languages,
-  Headphones,
-  TrendingUp,
-  Check,
-  ChevronDown
+  Headphones
 } from 'lucide-react';
 
 export default function App() {
-  const features = [
-    {
-      icon: Play,
-      title: 'Streaming HD & 4K',
-      description: 'Assista com qualidade de imagem excepcional. Suporte para resolução 4K e HDR em dispositivos compatíveis.',
-      gradient: 'from-pink-500/20 to-purple-500/20'
-    },
-    {
-      icon: Download,
-      title: 'Downloads Ilimitados',
-      description: 'Baixe quantos filmes e séries quiser. Assista offline sem consumir seus dados móveis.',
-      gradient: 'from-purple-500/20 to-pink-500/20'
-    },
-    {
-      icon: Zap,
-      title: 'Sem Anúncios',
-      description: 'Experiência premium sem interrupções. Nenhum comercial ou propaganda durante sua maratona.',
-      gradient: 'from-fuchsia-500/20 to-pink-500/20'
-    },
-    {
-      icon: Monitor,
-      title: 'Múltiplas Telas',
-      description: 'Assista em até 4 dispositivos simultaneamente. Compartilhe com sua família sem conflitos.',
-      gradient: 'from-pink-500/20 to-fuchsia-500/20'
-    },
-    {
-      icon: Globe,
-      title: 'Acesso Global',
-      description: 'Assista de qualquer lugar do mundo. Sem restrições geográficas ou bloqueios de região.',
-      gradient: 'from-purple-500/20 to-fuchsia-500/20'
-    },
-    {
-      icon: Sparkles,
-      title: 'Conteúdo Exclusivo',
-      description: 'Acesso a lançamentos e produções originais. Veja antes de todo mundo os novos títulos.',
-      gradient: 'from-fuchsia-500/20 to-purple-500/20'
-    },
-    {
-      icon: Languages,
-      title: 'Múltiplos Idiomas',
-      description: 'Legendas e dublagens em vários idiomas. Audio descrição para acessibilidade total.',
-      gradient: 'from-pink-500/20 to-purple-500/20'
-    },
-    {
-      icon: Shield,
-      title: '100% Seguro',
-      description: 'Seus dados protegidos com criptografia de ponta. Privacidade garantida em todas as transações.',
-      gradient: 'from-blue-500/20 to-cyan-500/20'
-    },
-    {
-      icon: Headphones,
-      title: 'Suporte 24/7',
-      description: 'Atendimento sempre disponível para ajudar. Chat ao vivo, email e telefone para seu conforto.',
-      gradient: 'from-green-500/20 to-emerald-500/20'
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'O STARLIGHT funciona em quais dispositivos?',
-      answer: 'O STARLIGHT está disponível em praticamente todos os dispositivos: Smart TVs, computadores (Windows, Mac, Linux), smartphones e tablets (Android e iOS), navegadores web, consoles de videogame e muito mais. Você pode assistir onde preferir!'
-    },
-    {
-      question: 'Posso assistir offline?',
-      answer: 'Sim! Com o aplicativo móvel do STARLIGHT você pode baixar filmes e séries para assistir offline. Perfeito para viagens, locais sem internet ou para economizar dados móveis. Os downloads ficam salvos no seu dispositivo até você decidir excluí-los.'
-    },
-    {
-      question: 'Quantas pessoas podem usar a mesma conta?',
-      answer: 'Uma conta STARLIGHT permite até 4 dispositivos assistindo simultaneamente. Você pode compartilhar com sua família e cada um pode assistir o que quiser ao mesmo tempo, em dispositivos diferentes.'
-    },
-    {
-      question: 'Qual a qualidade do streaming?',
-      answer: 'Oferecemos qualidade HD (720p), Full HD (1080p) e 4K Ultra HD com suporte a HDR. A qualidade se ajusta automaticamente à sua velocidade de internet para garantir a melhor experiência sem travamentos.'
-    },
-    {
-      question: 'Como funciona o download para Android?',
-      answer: 'Baixe nosso aplicativo APK oficial através do link fornecido. Após o download, abra o arquivo e permita a instalação de fontes desconhecidas nas configurações do seu Android. O app será instalado e você poderá fazer login com sua conta.'
-    },
-    {
-      question: 'Preciso de internet rápida?',
-      answer: 'Recomendamos pelo menos 5 Mbps para HD e 25 Mbps para 4K. Porém, nosso player se adapta à sua conexão, então você pode assistir mesmo com internet mais lenta (em qualidade reduzida). Com o download offline, você não precisa de internet nenhuma!'
-    },
-    {
-      question: 'O conteúdo tem legendas e dublagens?',
-      answer: 'Sim! A maioria do nosso conteúdo possui legendas em português e diversos idiomas. Muitos títulos também têm opção de dublagem em português. Você pode alternar entre áudio e legendas a qualquer momento durante a reprodução.'
-    },
-    {
-      question: 'Posso cancelar quando quiser?',
-      answer: 'Sim, não há período de fidelidade. Você pode cancelar sua assinatura a qualquer momento e continuará tendo acesso até o final do período pago. Sem taxas de cancelamento ou multas.'
-    }
-  ];
-
-  const plans = [
-    {
-      name: 'BÁSICO',
-      price: 'R$ 19,90',
-      features: [
-        'Qualidade HD',
-        '1 tela simultânea',
-        'Downloads ilimitados',
-        'Sem anúncios',
-        'Catálogo completo'
-      ],
-      color: 'from-pink-500 to-purple-500'
-    },
-    {
-      name: 'PREMIUM',
-      price: 'R$ 29,90',
-      features: [
-        'Qualidade 4K + HDR',
-        '4 telas simultâneas',
-        'Downloads ilimitados',
-        'Sem anúncios',
-        'Catálogo completo',
-        'Acesso antecipado',
-        'Conteúdo exclusivo'
-      ],
-      color: 'from-purple-500 to-fuchsia-500',
-      popular: true
-    },
-    {
-      name: 'FAMÍLIA',
-      price: 'R$ 39,90',
-      features: [
-        'Qualidade 4K + HDR',
-        '6 telas simultâneas',
-        'Downloads ilimitados',
-        'Sem anúncios',
-        'Catálogo completo',
-        'Acesso antecipado',
-        'Conteúdo exclusivo',
-        'Perfis infantis',
-        'Controle parental'
-      ],
-      color: 'from-fuchsia-500 to-pink-500'
-    }
-  ];
-
-  const stats = [
-    { number: '50K+', label: 'Filmes e Séries' },
-    { number: '4K', label: 'Ultra HD' },
-    { number: '24/7', label: 'Suporte' },
-    { number: '190+', label: 'Países' }
-  ];
-
   return (
     <div className="min-h-screen relative overflow-hidden bg-black">
       {/* SVG Filter for Glass Distortion */}
@@ -304,27 +148,6 @@ export default function App() {
                   </p>
                 </div>
               </LiquidGlassCard>
-            </div>
-
-            {/* Stats */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <LiquidGlassCard className="!w-full !h-auto">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 p-6 md:p-8">
-                  {stats.map((stat, index) => (
-                    <div key={index} className="text-center space-y-2">
-                      <div className="text-3xl md:text-5xl font-black bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                        {stat.number}
-                      </div>
-                      <div className="text-xs md:text-sm text-gray-400 tracking-wide">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </LiquidGlassCard>
-            </div>
-
-            {/* Scroll Indicator */}
-            <div className="flex justify-center animate-bounce">
-              <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-pink-400/50" />
             </div>
           </div>
         </section>
@@ -481,142 +304,65 @@ export default function App() {
                   </div>
 
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {features.map((feature, index) => (
-                      <FeatureCard key={index} {...feature} />
-                    ))}
-                  </div>
-                </div>
-              </LiquidGlassCard>
-            </div>
-          </div>
-        </section>
-
-        {/* PLANS SECTION */}
-        <section className="px-4 sm:px-6 py-12 md:py-20">
-          <div className="max-w-7xl mx-auto space-y-8 md:space-y-12">
-            <div className="text-center space-y-3 animate-fade-in-up">
-              <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Escolha Seu Plano
-              </h2>
-              <p className="text-gray-400 text-base md:text-lg">
-                Planos flexíveis para todos os perfis
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              {plans.map((plan, index) => (
-                <div 
-                  key={index}
-                  className="animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <LiquidGlassCard className={`!w-full !h-full ${plan.popular ? 'ring-2 ring-pink-500/50' : ''}`}>
-                    <div className="p-6 md:p-8 space-y-6 relative">
-                      {plan.popular && (
-                        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                          <div className="px-4 py-1.5 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-xs font-black">
-                            MAIS POPULAR
-                          </div>
-                        </div>
-                      )}
-                      
-                      <div className="space-y-4">
-                        <h3 className="text-xl md:text-2xl font-black tracking-wider">{plan.name}</h3>
-                        <div className="flex items-baseline gap-2">
-                          <span className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
-                            {plan.price}
-                          </span>
-                          <span className="text-gray-500 text-sm">/mês</span>
-                        </div>
+                    <div className="group space-y-4 p-6 md:p-8 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                        <Play className="w-8 h-8 md:w-10 md:h-10 text-pink-400" />
                       </div>
-
-                      <div className="space-y-3">
-                        {plan.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-start gap-3">
-                            <Check className="w-5 h-5 text-pink-400 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-300 text-sm md:text-base">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      <a
-                        href="https://starlight-taupe.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`block w-full py-3 md:py-4 rounded-xl text-center font-black transition-all transform hover:scale-105 ${
-                          plan.popular 
-                            ? 'bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500' 
-                            : 'border-2 border-white/30 hover:border-pink-400/50 hover:bg-white/5'
-                        }`}
-                      >
-                        Assinar Agora
-                      </a>
+                      <h4 className="text-xl md:text-2xl font-black">Qualidade HD</h4>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                        Imagem cristalina e som imersivo para a melhor experiência cinematográfica
+                      </p>
                     </div>
-                  </LiquidGlassCard>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* FAQ SECTION */}
-        <section className="px-4 sm:px-6 py-12 md:py-20">
-          <div className="max-w-4xl mx-auto">
-            <div className="animate-fade-in-up">
-              <LiquidGlassCard className="!w-full !h-auto">
-                <div className="p-6 md:p-12 space-y-8">
-                  <div className="text-center space-y-3">
-                    <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      Perguntas Frequentes
-                    </h2>
-                    <p className="text-gray-400 text-base md:text-lg">
-                      Tire suas dúvidas sobre o STARLIGHT
-                    </p>
-                  </div>
-
-                  <div className="space-y-2">
-                    {faqs.map((faq, index) => (
-                      <FAQItem key={index} {...faq} />
-                    ))}
-                  </div>
-                </div>
-              </LiquidGlassCard>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA SECTION */}
-        <section className="px-4 sm:px-6 py-12 md:py-20">
-          <div className="max-w-5xl mx-auto">
-            <div className="animate-fade-in-up">
-              <LiquidGlassCard className="!w-full !h-auto">
-                <div className="p-8 md:p-16 text-center space-y-6 md:space-y-8">
-                  <div className="space-y-4">
-                    <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      Comece Agora Mesmo
-                    </h2>
-                    <p className="text-gray-400 text-base md:text-xl max-w-2xl mx-auto">
-                      Entre no universo STARLIGHT e descubra milhares de filmes e séries 
-                      esperando por você. Sem anúncios, sem limites.
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-                    <a 
-                      href="https://starlight-taupe.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group relative px-10 md:px-12 py-4 md:py-5 rounded-2xl overflow-hidden w-full sm:w-auto transform hover:scale-105 transition-all duration-500 shadow-2xl shadow-pink-500/20"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 animate-gradient-x" style={{ backgroundSize: '200% 100%' }} />
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-slow" style={{ backgroundSize: '200% 100%' }} />
-                      <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-white/10 to-transparent" />
-                      
-                      <div className="relative flex items-center justify-center gap-3">
-                        <Sparkles className="w-5 h-5 md:w-6 md:h-6" />
-                        <span className="text-lg md:text-xl font-black tracking-wide">COMEÇAR AGORA</span>
+                    <div className="group space-y-4 p-6 md:p-8 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                        <Download className="w-8 h-8 md:w-10 md:h-10 text-purple-400" />
                       </div>
-                    </a>
+                      <h4 className="text-xl md:text-2xl font-black">Downloads Ilimitados</h4>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                        Baixe seus filmes e séries favoritos e assista offline quando quiser
+                      </p>
+                    </div>
+
+                    <div className="group space-y-4 p-6 md:p-8 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-pink-500/20 border border-fuchsia-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                        <Zap className="w-8 h-8 md:w-10 md:h-10 text-fuchsia-400" />
+                      </div>
+                      <h4 className="text-xl md:text-2xl font-black">Sem Anúncios</h4>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                        Experiência premium sem interrupções para você aproveitar ao máximo
+                      </p>
+                    </div>
+
+                    <div className="group space-y-4 p-6 md:p-8 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-pink-500/20 to-fuchsia-500/20 border border-pink-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                        <Monitor className="w-8 h-8 md:w-10 md:h-10 text-pink-400" />
+                      </div>
+                      <h4 className="text-xl md:text-2xl font-black">Múltiplas Telas</h4>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                        Assista em até 4 dispositivos simultaneamente com a mesma conta
+                      </p>
+                    </div>
+
+                    <div className="group space-y-4 p-6 md:p-8 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                        <Globe className="w-8 h-8 md:w-10 md:h-10 text-purple-400" />
+                      </div>
+                      <h4 className="text-xl md:text-2xl font-black">Acesso Global</h4>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                        Assista de qualquer lugar do mundo sem restrições geográficas
+                      </p>
+                    </div>
+
+                    <div className="group space-y-4 p-6 md:p-8 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-purple-500/20 border border-fuchsia-500/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                        <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-fuchsia-400" />
+                      </div>
+                      <h4 className="text-xl md:text-2xl font-black">Conteúdo Exclusivo</h4>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                        Acesso a produções originais e lançamentos antes de todo mundo
+                      </p>
+                    </div>
                   </div>
                 </div>
               </LiquidGlassCard>
@@ -626,54 +372,25 @@ export default function App() {
 
         {/* FOOTER */}
         <footer className="px-4 sm:px-6 py-12 md:py-16">
-          <div className="max-w-7xl mx-auto space-y-8">
-            <LiquidGlassCard className="!w-full !h-auto">
-              <div className="p-6 md:p-8">
-                <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-                  {/* Brand */}
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-2">
-                      <Star className="w-6 h-6 md:w-8 md:h-8 text-pink-400" />
-                      <span className="text-xl md:text-2xl font-black tracking-wider bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                        STARLIGHT
-                      </span>
-                    </div>
-                    <p className="text-gray-400 text-sm md:text-base">
-                      A melhor plataforma de streaming para você e sua família. 
-                      Filmes, séries e muito mais.
-                    </p>
-                  </div>
-
-                  {/* Links */}
-                  <div className="space-y-4">
-                    <h4 className="font-black text-base md:text-lg">Links Rápidos</h4>
-                    <div className="space-y-2 text-sm md:text-base">
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Sobre Nós</a>
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Planos</a>
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Ajuda</a>
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Blog</a>
-                    </div>
-                  </div>
-
-                  {/* Legal */}
-                  <div className="space-y-4">
-                    <h4 className="font-black text-base md:text-lg">Legal</h4>
-                    <div className="space-y-2 text-sm md:text-base">
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Termos de Uso</a>
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Privacidade</a>
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Cookies</a>
-                      <a href="#" className="block text-gray-400 hover:text-pink-400 transition-colors">Contato</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="border-t border-white/10 mt-8 pt-8 text-center">
-                  <p className="text-gray-500 text-xs md:text-sm">
-                    © 2025 STARLIGHT. Todos os direitos reservados. Plataforma premium de streaming.
-                  </p>
-                </div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-6 animate-fade-in">
+              <div className="flex items-center justify-center gap-3">
+                <Star className="w-6 h-6 text-pink-400" />
+                <span className="text-2xl font-black tracking-wider bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                  STARLIGHT
+                </span>
               </div>
-            </LiquidGlassCard>
+              <p className="text-sm text-gray-500">
+                © 2025 STARLIGHT. Plataforma premium de streaming.
+              </p>
+              <div className="flex justify-center gap-6 text-sm text-gray-600">
+                <a href="#" className="hover:text-pink-400 transition-colors">Termos de Uso</a>
+                <span>•</span>
+                <a href="#" className="hover:text-purple-400 transition-colors">Privacidade</a>
+                <span>•</span>
+                <a href="#" className="hover:text-pink-400 transition-colors">Suporte</a>
+              </div>
+            </div>
           </div>
         </footer>
       </div>
