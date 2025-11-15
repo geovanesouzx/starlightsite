@@ -128,7 +128,7 @@ export default function App() {
                     </a>
 
                     <a
-                      href="https://www.mediafire.com/file/84rxfhlhti3eime/STARLIGHT.apk/file"
+                      href="https://www.mediafire.com/file/pysjp96qw6ptz54/app-debug.apk/file"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group relative px-8 md:px-12 py-4 md:py-6 rounded-2xl overflow-hidden w-full sm:w-auto transform hover:scale-105 transition-all duration-500 backdrop-blur-xl border-2 border-white/30 hover:border-pink-400/50 shadow-xl hover:shadow-pink-500/20"
@@ -271,7 +271,7 @@ export default function App() {
 
                       <div className="pt-4">
                         <a
-                          href="https://www.mediafire.com/file/84rxfhlhti3eime/STARLIGHT.apk/file"
+                          href="https://www.mediafire.com/file/pysjp96qw6ptz54/app-debug.apk/file"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-3 text-purple-400 hover:text-purple-300 transition-colors group/btn font-bold text-base md:text-lg"
