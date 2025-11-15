@@ -144,7 +144,7 @@ export default function App() {
 
                   {/* Subtitle */}
                   <p className="text-gray-400 text-xs md:text-sm">
-                    Disponível para Web, Android e iOS
+                    Disponível para Web, Android
                   </p>
                 </div>
               </LiquidGlassCard>
@@ -160,7 +160,7 @@ export default function App() {
                 <div className="p-6 md:p-12 space-y-8 md:space-y-12">
                   <div className="text-center space-y-3">
                     <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      Disponível em Todas as Plataformas
+                      Disponível para PC e Android
                     </h2>
                     <p className="text-gray-400 text-base md:text-lg">
                       Assista onde e quando quiser
